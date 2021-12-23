@@ -32,16 +32,16 @@ class Lista
 
 {
    constructor()
-   
+
    {
     this.inicio = null;
-   
+
    }
 
    insertar(dato)
-   
+
    {
-     
+
      if (this.inicio == null){
        this.inicio = new Node_L(dato);
        this.inicio.sig = null;
@@ -71,10 +71,10 @@ class Lista
       lista_aux = lista_aux.sig;
     }
     return lista_aux;
-    
+
    }
 
-   borrar() 
+   borrar()
 
    {
     var lista_aux = this.inicio;
@@ -87,12 +87,12 @@ class Lista
 
     }
    }
-     
+
 
 }
 
 
- 
+
 
 class ABB_T
 
@@ -104,13 +104,13 @@ class ABB_T
 
     insertar(dato){
       if (this.raiz == null){
-        
+
         this.raiz = new Node(dato);
         this.raiz.l = 630;
         this.raiz.t = 10;
         this.raiz.h = 0;
       }
-     
+
       else{
         const insertarRecursivo = function (n,dato,altura){
           if (dato < n.data){
@@ -119,7 +119,7 @@ class ABB_T
               n.izq.l = n.l - Math.round(630/Math.pow(2, altura));
               n.izq.t = n.t + 100;
               n.izq.h = altura;
-             
+
             }
             else {
               insertarRecursivo(n.izq,dato,altura+1);
@@ -131,20 +131,20 @@ class ABB_T
               n.der.l = n.l + Math.round(630/Math.pow(2, altura));
               n.der.t = n.t + 100;
               n.der.h = altura;
-            
+
             }
             else{
               insertarRecursivo(n.der,dato,altura+1);
             }
-          
+
           }
-          
+
         }
         insertarRecursivo(this.raiz,dato,1);
       }
     }
-  
-    
+
+
 
     inOrder(){
       document.getElementById("ABB").innerHTML = "InOrder: ";
@@ -177,7 +177,7 @@ class ABB_T
     }
 
     buscar(dato){
-     
+
         const buscarRecursivo = function (n,dato){
           if (dato == n.data){
             return n;
@@ -189,15 +189,15 @@ class ABB_T
           else {
             return buscarRecursivo(n.der,dato);
           }
-          
-          
+
+
         }
         return buscarRecursivo(this.raiz,dato);
 
     }
 
     buscarPadre(dato){
-     
+
       const buscarPadreRecursivo = function (n,dato){
 
         if (n.der != null){
@@ -217,10 +217,10 @@ class ABB_T
         else {
           return buscarPadreRecursivo(n.der,dato);
         }
-        
-        
+
+
       }
-   
+
       return buscarPadreRecursivo(this.raiz,dato);
 
   }
@@ -239,21 +239,21 @@ function insertarLista(){
   var div = document.querySelector(".lista");
 
   if (n.h != 0){
-         
+
      var nuevo = agregarNodoLista(n);
-     animarNodoLista(div,nuevo,n);   
+     animarNodoLista(div,nuevo,n);
   }
   else{
- 
-    var nuevo = agregarNodoLista(n); 
+
+    var nuevo = agregarNodoLista(n);
   }
 
-  
+
 }
 
 
 function agregarNodoLista(nodo){
-  
+
   var dato_final = nodo.data.toFixed(2);
   var clase = document.querySelector(".lista");
   var n = document.createElement("div");
@@ -262,51 +262,51 @@ function agregarNodoLista(nodo){
   n.style.left = 0 + "px";
   n.style.top = 0 + "px";
   clase.appendChild(n);
-  
+
   return n;
 
 }
 
 
 function animarNodoLista(div,nuevo,n) {
-  
+
   var yi_n = 0;
   var lf_n = n.l;
   var xi_n = 0;
   var li_n = 0;
-   
 
 
-  var t = setInterval(move,0.6);  
- 
+
+  var t = setInterval(move,0.6);
+
 
   function move(){
 
-    
+
       if (Math.round(xi_n) == Math.round(lf_n) ){
        clearInterval(t);
       }
 
       if (Math.round(xi_n) != Math.round(lf_n)) {
-         
+
           xi_n += (lf_n-li_n)/(50*lf_n/100);
           nuevo.style.left = xi_n + "px";
           nuevo.style.top = yi_n + "px";
-          
+
       if (Math.round(xi_n) >= lf_n-65){
          var linea_puntos = document.createElement("div");
          linea_puntos.setAttribute("class","punto");
 
          linea_puntos.style.left =  xi_n + "px";
          linea_puntos.style.top = 35 + "px";
-         div.appendChild(linea_puntos);        
-   
-      }
-      
+         div.appendChild(linea_puntos);
 
-          
       }
-    } 
+
+
+
+      }
+    }
   }
 
 
@@ -327,16 +327,16 @@ function insertarABB(){
   var div = document.querySelector(".container");
 
   if (n.h != 0){
-         
+
      var nuevo = agregarNodoCSS(n);
-     animarNodo(div,nuevo,n);   
+     animarNodo(div,nuevo,n);
   }
   else{
- 
-    var nuevo = agregarNodoCSS(n); 
+
+    var nuevo = agregarNodoCSS(n);
   }
 
-  
+
 }
 
 
@@ -371,7 +371,7 @@ function calcularPuntos(padre,n){
 
 
 function agregarNodoCSS(nodo){
-  
+
   var dato_final = nodo.data.toFixed(2);
   var clase = document.querySelector(".container");
   var n = document.createElement("div");
@@ -380,7 +380,7 @@ function agregarNodoCSS(nodo){
   n.style.left = 630 + "px";
   n.style.top = 10 + "px";
   clase.appendChild(n);
-  
+
   return n;
 
 }
@@ -397,25 +397,25 @@ function agregarNodoCSS(nodo){
 
 
 
-   
-  
+
+
 
   function animarNodo(div,nuevo,n) {
-   
-    
+
+
     var camino = arbol.raiz;
     if (n.data < camino.data){
       var puntos = calcularPuntos(camino,camino.izq);
       camino = camino.izq;
-   
-    } 
+
+    }
     else{
       var puntos = calcularPuntos(camino,camino.der);
       camino = camino.der;
 
     }
 
-    var li_l = puntos[0] ,lf_l = puntos[1] ,ti_l = puntos[2]; 
+    var li_l = puntos[0] ,lf_l = puntos[1] ,ti_l = puntos[2];
     var tf_l = puntos[3] ,li_n = puntos[4] ,lf_n = puntos[5];
     var ti_n = puntos[6] , tf_n = puntos[7];
     var x_n = lf_n-li_n;
@@ -431,11 +431,11 @@ function agregarNodoCSS(nodo){
     var RandomColor = Math.floor(Math.random()*16777215).toString(16);
     var j = 0;
 
-    var t = setInterval(move,0.6);  
-   
-  
+    var t = setInterval(move,0.6);
+
+
     function move(){
-      
+
         /*
         if (j == 0){
          RandomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -450,52 +450,52 @@ function agregarNodoCSS(nodo){
         }
 
         else if ((camino.data == n.data) && (Math.round(xi_n) != Math.round(lf_n)) ){
-         
+
            xi_n += (lf_n-li_n)/65;
            yi_n += slope_n*((lf_n-li_n)/65);
            nuevo.style.left = xi_n + "px";
            nuevo.style.top = yi_n + "px";
-   
-           
+
+
            var linea_puntos = document.createElement("div");
            linea_puntos.setAttribute("class","punto");
-  
+
            linea_puntos.style.left =  (i*(lf_l-li_l))/65+li_l + "px";
            linea_puntos.style.top = slope_l*((i*(lf_l-li_l)) /65 +li_l) -slope_l*li_l + ti_l + "px";
           /* linea_puntos.style.backgroundColor = "#" + RandomColor;*/
-  
+
            div.appendChild(linea_puntos);
 
            i++;
-           
-         
-        
+
+
+
         }
-        
+
         else{
 
           if (Math.round(xi_n) != Math.round(lf_n)) {
-           
+
             xi_n += (lf_n-li_n)/65;
             yi_n += slope_n*((lf_n-li_n)/65);
             nuevo.style.left = xi_n + "px";
             nuevo.style.top = yi_n + "px";
             i++;
 
-  
-      
+
+
 
           }
 
           else {
-     
+
 
             if ((camino.data > n.data)){
-   
+
               var puntos = calcularPuntos(camino,camino.izq);
               camino = camino.izq;
 
-              li_l = puntos[0] ,lf_l = puntos[1] ,ti_l = puntos[2]; 
+              li_l = puntos[0] ,lf_l = puntos[1] ,ti_l = puntos[2];
               tf_l = puntos[3] ,li_n = puntos[4] ,lf_n = puntos[5];
               ti_n = puntos[6] , tf_n = puntos[7];
               x_n = lf_n-li_n;
@@ -510,17 +510,17 @@ function agregarNodoCSS(nodo){
               slope_l = y_l/x_l;
 
               nuevo.style.left = xi_n + "px";
-              nuevo.style.top = yi_n  + "px"; 
+              nuevo.style.top = yi_n  + "px";
               i = 0;
-            
-            
+
+
             }
-      
+
             else if (camino.data < n.data){
               var puntos = calcularPuntos(camino,camino.der);
               camino = camino.der;
 
-              li_l = puntos[0] ,lf_l = puntos[1] ,ti_l = puntos[2]; 
+              li_l = puntos[0] ,lf_l = puntos[1] ,ti_l = puntos[2];
               tf_l = puntos[3] ,li_n = puntos[4] ,lf_n = puntos[5];
               ti_n = puntos[6] , tf_n = puntos[7];
               x_n = lf_n-li_n;
@@ -535,22 +535,22 @@ function agregarNodoCSS(nodo){
 
 
               nuevo.style.left = xi_n + "px";
-              nuevo.style.top = yi_n  + "px"; 
+              nuevo.style.top = yi_n  + "px";
               i = 0;
 
             }
 
 
           }
-           
-      
-      
-        } 
+
+
+
+        }
 
     }
-  
- 
-   
+
+
+
   }
 
 
@@ -564,7 +564,7 @@ function mostrarABB() {
 
 
 function borrarTodo() {
-  
+
   arbol.borrar();
   delete arbol;
 
@@ -577,7 +577,7 @@ function borrarTodo() {
   for (var i = 0; i < largo_L; i++){
     nodosL[largo_L-i-1].remove();
   }
-  
+
   var nodos= document.getElementsByClassName("nodo");
   const largo = nodos.length;
   for (var i = 0; i < largo; i++){
@@ -602,21 +602,15 @@ function crearLinea(div,li,ti,lf,tf){
   let slope = y/x;
   var xi = li;
   var yi = ti;
-  
+
 
   for (var i = 0; i < 150; i++){
     var puntos = document.createElement("div");
     puntos.setAttribute("class","punto");
     puntos.style.left =  (i*(lf-li))/150+li + "px";
     puntos.style.top = slope*((i*(lf-li))/150+li) -slope*li + ti + "px";
-  
+
     div.appendChild(puntos);
 
   }
 }
-
-
-
-
-
-
