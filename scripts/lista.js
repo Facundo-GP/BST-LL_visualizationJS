@@ -92,7 +92,7 @@ function agregarNodoLista(nodo){
 
 function insertarLista(){
 
-  dato = parseFloat(document.getElementById("numero_lista").value);
+  var dato = parseFloat(document.getElementById("numero_lista").value);
   document.getElementById("numero_lista").value = "";
   lista.insertar(dato);
   n = lista.buscar(dato);
@@ -152,4 +152,4 @@ function animarNodoLista(div,nuevo,n) {
     }
   }
 
-export {Lista,agregarNodoLista};
+export {Lista,insertarLista};

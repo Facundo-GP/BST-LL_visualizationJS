@@ -148,7 +148,7 @@ class BS_t
 
 function insertarABB(){
 
-  dato = parseFloat(document.getElementById("numero").value);
+  var dato = parseFloat(document.getElementById("numero").value);
   document.getElementById("numero").value = "";
   arbol.insertar(dato);
   var n = arbol.buscar(dato);
