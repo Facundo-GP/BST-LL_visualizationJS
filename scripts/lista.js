@@ -161,5 +161,4 @@ function animarNodoLista(div,nuevo,n) {
   }
 
 
-export default Lista;
-export default agregarNodoLista;
+export default {Lista,agregarNodoLista};

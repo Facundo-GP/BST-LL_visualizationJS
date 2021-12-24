@@ -386,5 +386,4 @@ function crearLinea(div,li,ti,lf,tf){
   }
 }
 
-export default ABB_T;
-export default insertarABB;
+export default {ABB_T,insertarABB};
