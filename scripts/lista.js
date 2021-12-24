@@ -16,7 +16,7 @@ class Node_L
 
 
 
-export class Lista
+class Lista
 
 {
    constructor()
@@ -81,8 +81,7 @@ export class Lista
 
 /*DOM*/
 
-
-export function agregarNodoLista(nodo){
+ function agregarNodoLista(nodo){
 
   var dato_final = nodo.data.toFixed(2);
   var clase = document.querySelector(".lista");
@@ -160,3 +159,7 @@ function animarNodoLista(div,nuevo,n) {
       }
     }
   }
+
+
+export default Lista;
+export default agregarNodoLista;

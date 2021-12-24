@@ -1,5 +1,5 @@
 
-export function borrarTodo() {
+function borrarTodo() {
 
   arbol.borrar();
   delete arbol;
@@ -28,3 +28,5 @@ export function borrarTodo() {
   arbol = new ABB_T;
   lista = new Lista;
 }
+
+export default borrarTodo;

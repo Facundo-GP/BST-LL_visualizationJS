@@ -12,7 +12,7 @@ class Node
 }
 
 
-export class ABB_T
+class ABB_T
 
 {
     constructor()
@@ -150,7 +150,7 @@ export class ABB_T
 
 
 
-export function insertarABB(){
+function insertarABB(){
 
   dato = parseFloat(document.getElementById("numero").value);
   document.getElementById("numero").value = "";
@@ -361,25 +361,10 @@ function agregarNodoCSS(nodo){
               i = 0;
 
             }
-
-
           }
-
-
-
         }
-
     }
-
-
-
   }
-
-
-
-
-
-
 
 
 function crearLinea(div,li,ti,lf,tf){
@@ -400,3 +385,6 @@ function crearLinea(div,li,ti,lf,tf){
 
   }
 }
+
+export default ABB_T;
+export default insertarABB;
