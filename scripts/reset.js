@@ -29,4 +29,4 @@ function borrarTodo() {
   lista = new Lista;
 }
 
-export default {borrarTodo};
+export {borrarTodo};

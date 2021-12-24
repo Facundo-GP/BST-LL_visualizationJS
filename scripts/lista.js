@@ -1,7 +1,6 @@
 /*Clases*/
 
 class Node_L
-
 {
    constructor(data)
    {
@@ -14,10 +13,7 @@ class Node_L
 
 }
 
-
-
 class Lista
-
 {
    constructor()
 
@@ -76,7 +72,6 @@ class Lista
     }
    }
 }
-
 
 /*DOM*/
 
@@ -157,4 +152,4 @@ function animarNodoLista(div,nuevo,n) {
     }
   }
 
-export default {Lista,agregarNodoLista};
+export {Lista,agregarNodoLista};

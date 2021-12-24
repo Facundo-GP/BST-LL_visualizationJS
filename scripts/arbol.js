@@ -1,3 +1,5 @@
+/*Clases*/
+
 class Node
 {
     constructor(data)
@@ -11,9 +13,7 @@ class Node
     }
 }
 
-
 class BS_t
-
 {
     constructor()
     {
@@ -143,8 +143,6 @@ class BS_t
 
   }
 }
-
-
 
 /*DOM*/
 
@@ -374,4 +372,4 @@ function crearLinea(div,li,ti,lf,tf){
 }
 
 
-export default {BS_t,insertarABB};
+export {BS_t,insertarABB};
