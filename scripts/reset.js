@@ -25,8 +25,9 @@ function borrarTodo() {
   for (var i = 0; i < largo_p; i++){
     puntos[largo_p-i-1].remove();
   }
-  arbol = new BS_t;
-  lista = new Lista;
+
+  window.arbol = new BS_t;
+  window.lista = new Lista;
 }
 
 export {borrarTodo};
