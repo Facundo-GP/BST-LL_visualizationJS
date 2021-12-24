@@ -219,11 +219,7 @@ function agregarNodoCSS(nodo){
 
 
 
-
-
-
-  function animarNodo(div,nuevo,n) {
-
+function animarNodo(div,nuevo,n) {
 
     var camino = arbol.raiz;
     if (n.data < camino.data){
@@ -386,4 +382,5 @@ function crearLinea(div,li,ti,lf,tf){
   }
 }
 
-export default {BS_t ,insertarABB };
+
+export default {BS_t,insertarABB};

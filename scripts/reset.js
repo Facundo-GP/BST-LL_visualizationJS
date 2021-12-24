@@ -1,3 +1,6 @@
+import {Lista, agregarNodoLista} from "./lista.js";
+import {BS_t , insertarABB} from "./arbol.js";
+
 function borrarTodo() {
 
   arbol.borrar();
