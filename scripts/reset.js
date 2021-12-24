@@ -1,4 +1,4 @@
-import {BST , insertarABB} from "./arbol.js";
+import {BS_t , insertarABB} from "./arbol.js";
 
 function borrarTodo() {
 
