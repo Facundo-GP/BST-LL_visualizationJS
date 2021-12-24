@@ -12,7 +12,7 @@ class Node
 }
 
 
-class ABB_T
+class BT
 
 {
     constructor()
@@ -386,4 +386,4 @@ function crearLinea(div,li,ti,lf,tf){
   }
 }
 
-export default {ABB_T,insertarABB};
+export default {BT,insertarABB};
