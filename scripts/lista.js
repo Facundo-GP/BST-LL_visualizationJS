@@ -95,7 +95,7 @@ function insertarLista(){
   var dato = parseFloat(document.getElementById("numero_lista").value);
   document.getElementById("numero_lista").value = "";
   lista.insertar(dato);
-  n = lista.buscar(dato);
+  var n = lista.buscar(dato);
   var div = document.querySelector(".lista");
 
   if (n.h != 0){
