@@ -78,10 +78,9 @@ class Lista
 }
 
 
-
 /*DOM*/
 
- function agregarNodoLista(nodo){
+function agregarNodoLista(nodo){
 
   var dato_final = nodo.data.toFixed(2);
   var clase = document.querySelector(".lista");
@@ -116,8 +115,6 @@ function insertarLista(){
 
 
 }
-
-
 
 function animarNodoLista(div,nuevo,n) {
 
@@ -159,6 +156,5 @@ function animarNodoLista(div,nuevo,n) {
       }
     }
   }
-
 
 export default {Lista,agregarNodoLista};
