@@ -2,10 +2,8 @@
 function borrarTodo() {
 
   arbol.borrar();
-  delete arbol;
 
   lista.borrar();
-  delete lista;
 
 
   var nodosL = document.getElementsByClassName("nodo_L");
