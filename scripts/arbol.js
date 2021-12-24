@@ -291,8 +291,6 @@ function animarNodo(div,nuevo,n) {
             i++;
 
 
-
-
           }
 
           else {
