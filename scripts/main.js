@@ -7,3 +7,6 @@ window.insertarLista = insertarLista;
 window.BS_t = BS_t;
 window.insertarABB = insertarABB;
 window.borrarTodo = borrarTodo;
+
+window.arbol = new BS_t;
+window.lista = new Lista;
