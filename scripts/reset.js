@@ -1,4 +1,4 @@
-import {BT , insertarABB} from "./arbol.js";
+import {BST , insertarABB} from "./arbol.js";
 
 function borrarTodo() {
 
@@ -24,7 +24,7 @@ function borrarTodo() {
   for (var i = 0; i < largo_p; i++){
     puntos[largo_p-i-1].remove();
   }
-  arbol = new BT;
+  arbol = new BS_t;
   lista = new Lista;
 }
 
