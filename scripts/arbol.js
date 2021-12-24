@@ -148,8 +148,6 @@ class BS_t
 
 /*DOM*/
 
-
-
 function insertarABB(){
 
   dato = parseFloat(document.getElementById("numero").value);
@@ -170,9 +168,6 @@ function insertarABB(){
 
 
 }
-
-
-
 
 function calcularPuntos(padre,n){
 
@@ -201,7 +196,6 @@ function calcularPuntos(padre,n){
 
 }
 
-
 function agregarNodoCSS(nodo){
 
   var dato_final = nodo.data.toFixed(2);
@@ -216,8 +210,6 @@ function agregarNodoCSS(nodo){
   return n;
 
 }
-
-
 
 function animarNodo(div,nuevo,n) {
 
@@ -361,7 +353,6 @@ function animarNodo(div,nuevo,n) {
         }
     }
   }
-
 
 function crearLinea(div,li,ti,lf,tf){
   let x = lf-li
